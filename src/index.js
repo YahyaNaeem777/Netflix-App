@@ -1,20 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import AppData from './AppData';
+import {App} from "./App";
+// import Fav_series from "./Fav_series";
+
 // import reportWebVitals from './reportWebVitals';
 // console.log(AppData)
 
-  // function renderData(currentValue){
-    
-  // }
+// function renderData(currentValue){
 
-ReactDOM.render(
-  <>
-    <h1 className="heading_style">List of top 5 netflex series in 2021</h1>
+// }
 
-    {AppData.map((currentValue)=>{
+ReactDOM.render(<App />, document.getElementById("root"));
+  // <>
+    {/* <h1 className="heading_style">List of top 5 netflex series in 2021</h1>
+
+    {AppData.map((currentValue) => {
       return (
         <App
           key={currentValue.id}
@@ -24,8 +25,10 @@ ReactDOM.render(
           title={currentValue.title}
         />
       );
-    })}
-{/*    
+    })} */}
+
+
+    {/*    
     <App
       imgsrc={AppData[1].imgsrc}
       spantxt={AppData[1].spantxt}
@@ -50,9 +53,8 @@ ReactDOM.render(
       btnTitle={AppData[4].btnTitle}
       title={AppData[4].title}
     /> */}
-  </>,
-  document.getElementById("root")
-);
+  // </>
+ 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

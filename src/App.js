@@ -1,25 +1,38 @@
 // import logo from './logo.svg';
-import React, { Fragment } from "react";
+import React from "react";
 import "./App.css";
+import Netflix from "./Netflix";
+import Hollywood from "./Hollywood";
+
 // import Cards from "./cards";
 
-function App(props) {
+const favSeries = "season";
+const Fav = () => {
+  if (favSeries === "Netflix") {
+    return <Netflix />;
+  } else {
+    return <Hollywood />;
+  }
+};
+
+function App() {
   return (
-    <Fragment>
-      <div className="cards">
-        <div className="card">
-          <img src={props.imgsrc} alt="myPic" className="card_image" />
-          <div className="card_info">
-            <span className="card_category">{props.spantxt}</span>
-            <h3 className="card_title">{props.title}</h3>
-            <a href="https://www.netflix.com/pk/" target="_blank">
-              <button>{props.btnTitle}</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </Fragment>
+    <div>
+      <h1 className="heading_style">List of top 5 netflex series in 2021</h1>
+      <Fav />
+      {/* {AppData.map((currentValue) => {
+        return (
+          <Cards
+            key={currentValue.id}
+            imgsrc={currentValue.imgsrc}
+            spantxt={currentValue.spantxt}
+            btnTitle={currentValue.btnTitle}
+            title={currentValue.title}
+          />
+        );
+      })} */}
+    </div>
   );
 }
 
-export default App;
+export { App, Fav };

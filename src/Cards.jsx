@@ -1,25 +1,22 @@
 import React from "react";
+// import AppData from "./AppData";
 
-function Cards(){
+function Cards(props){
     return(
-        <>
-        
-        <div className="cards">
-
+<div>
+     <div className="cards">
         <div className="card">
-            <img src="" alt="myPic" className="card_image"/>
-            <div className="card-info">
-                <span className="card_category"></span>
-                <h3 className="card_title"></h3>
-                <a href="" target="_blank">
-                    <button>Watch now</button>
-                </a>
-            </div>
+          <img src={props.imgsrc} alt="myPic" className="card_image" />
+          <div className="card_info">
+            <span className="card_category">{props.spantxt}</span>
+            <h3 className="card_title">{props.title}</h3>
+            <a href="https://www.netflix.com/pk/" target="_blank">
+              <button>{props.btnTitle}</button>
+            </a>
+          </div>
         </div>
-
-        </div>
-        
-        </>
+      </div>
+</div>
     )
 }
 
