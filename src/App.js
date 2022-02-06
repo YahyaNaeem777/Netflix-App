@@ -6,20 +6,21 @@ import Hollywood from "./Hollywood";
 
 // import Cards from "./cards";
 
-const favSeries = "season";
-const Fav = () => {
-  if (favSeries === "Netflix") {
-    return <Netflix />;
-  } else {
-    return <Hollywood />;
-  }
-};
+const favSeries = "holly";
+// const Fav = () => {
+//   if (favSeries === "Netflix") {
+//     return <Netflix />;
+//   } else {
+//     return <Hollywood />;
+//   }
+// };
 
 function App() {
   return (
     <div>
       <h1 className="heading_style">List of top 5 netflex series in 2021</h1>
-      <Fav />
+      {favSeries === "Netflix" ? <Netflix /> : <Hollywood />}
+      {/* <Fav /> */}
       {/* {AppData.map((currentValue) => {
         return (
           <Cards
@@ -35,4 +36,6 @@ function App() {
   );
 }
 
-export { App, Fav };
+// export { App, Fav };
+
+export default App;

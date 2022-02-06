@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {App} from "./App";
+import App from "./App";
 // import Fav_series from "./Fav_series";
 
 // import reportWebVitals from './reportWebVitals';
